@@ -1,0 +1,44 @@
+General Data Coding
+dcs: 0x0
+Length: 0x0
+user_data_length: 0x0
+ValidityIndicator: 2
+user_data: 
+Sending
+Message sent: 0x63 / 0x000a
+41 54 2b 43 4d 47 46 3d 30 0d                   | AT+CMGF=0       
+write: [AT+CMGF=0<cr>]
+read : [AT+CMGF=0<cr><cr><lf>OK<cr><lf>]
+Message received: 0x63 / 0x0010
+02 41 54 2b 43 4d 47 46 3d 30 0d 0d 0a 4f 4b 0d |  AT+CMGF=0   OK 
+Received message type 63
+PDU mode set
+Sending initial sequence
+Message sent: 0x64 / 0x000b
+41 54 2b 43 4d 47 53 3d 31 34 0d                | AT+CMGS=14      
+write: [AT+CMGS=14<cr>]
+read : [AT+CMGS=14<cr><cr><lf>> ]
+Message received: 0x64 / 0x000f
+01 41 54 2b 43 4d 47 53 3d 31 34 0d 0d 0a 3e    |  AT+CMGS=14   > 
+Received message type 64
+Got response 0
+Sending frame: 079119890410013011000C911989041444540000AA00
+Message sent: 0x21 / 0x002d
+30 37 39 31 31 39 38 39 30 34 31 30 30 31 33 30 | 0791198904100130
+31 31 30 30 30 43 39 31 31 39 38 39 30 34 31 34 | 11000C9119890414
+34 34 35 34 30 30 30 30 41 41 30 30 1a          | 44540000AA00    
+write: [079119890410013011000C911989041444540000AA00^Z]
+read : [079119890410013011000C911989041444540000AA00^Z<cr><lf>+CMGS: 223<cr><lf><cr><lf>OK<cr><lf>]
+Message received: 0x21 / 0x0041
+02 30 37 39 31 31 39 38 39 30 34 31 30 30 31 33 |  079119890410013
+30 31 31 30 30 30 43 39 31 31 39 38 39 30 34 31 | 011000C911989041
+34 34 34 35 34 30 30 30 30 41 41 30 30 1a 0d 0a | 444540000AA00   
+2b 43 4d 47 53 3a 20 32 32 33 0d 0a 0d 0a 4f 4b | +CMGS: 223    OK
+0d                                              |                 
+Received message type 21
+Message sent (reference: 223)
+Send succeeded!
+=> 0
+irb(main):005:0> 
+
+
